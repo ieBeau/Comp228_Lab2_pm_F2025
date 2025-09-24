@@ -17,13 +17,13 @@ public class MainDriver {
                 System.out.println("\nEnter values for Interest " + (i + 1) + ": ");
                 
                 System.out.print("  Principal: ");
-                Double principal = scanner.nextDouble();
+                Double principal = Double.valueOf(scanner.nextLine());
 
                 System.out.print("  Rate (%): ");
-                BigDecimal rate = scanner.nextBigDecimal();
+                BigDecimal rate = new BigDecimal(scanner.nextLine());
 
                 System.out.print("  Time (years): ");
-                Double time = scanner.nextDouble();
+                Double time = Double.valueOf(scanner.nextLine());
 
                 interests[i] = new Interest(principal, rate, time);
             } catch (IllegalArgumentException e) {
